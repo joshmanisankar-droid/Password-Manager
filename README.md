@@ -1,6 +1,9 @@
-# 🔐 Secure Vault: Flask-Based Password Manager
+# 🔐 Secure Vault: Flask Password Manager
 
-A lightweight, local-first web application designed to store, generate, and manage digital credentials securely. Built with **Python** and **Flask**, this project demonstrates a complete **CRUD** (Create, Read, Update, Delete) lifecycle with a focus on **Conditional Data Retrieval** for enhanced privacy.
+[![Python Version](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
+[![Flask Version](https://img.shields.io/badge/flask-3.1.0-green.svg)](https://flask.palletsprojects.com/)
+
+A lightweight, local-first web application designed to store and manage digital credentials securely. Built with **Python** and **Flask**, this project focuses on **Conditional Data Retrieval**—passwords stay hidden until you specifically search for them.
 
 
 
@@ -8,35 +11,60 @@ A lightweight, local-first web application designed to store, generate, and mana
 
 ## 🚀 Key Features
 
-* **Session-Based Authentication:** A secure login gate prevents unauthorized users from accessing the vault data.
-* **Privacy-First Retrieval:** Unlike standard managers, the vault remains "hidden" by default. Data is only rendered when a specific search query is executed, preventing "shoulder-surfing" exposure.
-* **Smart Password Logic:** Features an automated generator that creates high-entropy, randomized passwords if the user leaves the input blank.
-* **Persistent Storage:** Uses a structured `JSON` backend, making the database portable and easy to back up without complex SQL setups.
-* **Clean UI/UX:** A responsive, CSS3-styled interface with a focus on simplicity and ease of use.
-
----
-
-## 🛠️ Tech Stack
-
-* **Backend:** Python 3.13 / Flask
-* **Templating:** Jinja2 (Dynamic HTML rendering)
-* **Frontend:** HTML5 / CSS3
-* **Storage:** JSON (Flat-file database)
+* **🔒 Session Authentication:** Secure login gateway to protect your data.
+* **🕵️ Privacy-First Search:** Data is only rendered when searched, preventing "shoulder-surfing" exposure.
+* **🎲 Auto-Generator:** Generates high-entropy passwords automatically if the input is left blank.
+* **📂 JSON Persistence:** Lightweight, portable database for easy backups.
+* **📱 Responsive UI:** Clean, modern design built with CSS3 and Jinja2 templates.
 
 ---
 
 ## 📦 Project Structure
 
-To maintain a clean MVC-style (Model-View-Controller) architecture, the files are organized as follows:
-
 ```text
 Josh_23/
-├── app.py             # Backend: Flask server & routing logic
-├── data.json          # Database: Local JSON storage (Private)
-├── .gitignore         # Security: Prevents sensitive files from being uploaded
-├── requirements.txt   # Configuration: Lists necessary Python libraries
-└── templates/         # Frontend: HTML UI components
-    ├── index.html     # Main Dashboard (Vault & Search)
-    └── login.html     # Authentication Gateway
+├── app.py             # Backend server & routing logic
+├── data.json          # Private storage (Excluded via .gitignore)
+├── .gitignore         # Security: Prevents sensitive file uploads
+├── requirements.txt   # Configuration: Project dependencies
+└── templates/         # UI Components
+    ├── index.html     # Main Dashboard & Search
+    └── login.html     # Security Gateway
 \```
 
+---
+
+## 🛠️ Setup & Installation
+
+### 1. Clone the Repository
+\```bash
+git clone [https://github.com/joshmanisankar-droid/Password-Manager.git](https://github.com/joshmanisankar-droid/Password-Manager.git)
+cd Password-Manager
+\```
+
+### 2. Install Dependencies
+\```bash
+pip install -r requirements.txt
+\```
+
+### 3. Run the Application
+\```bash
+python app.py
+\```
+
+> **Note:** Access the vault at `http://127.0.0.1:8080`.  
+> **Default Login:** `josh` / `1234`
+
+---
+
+## ✅ Development Roadmap
+- [x] User Authentication & Sessions
+- [x] Search-to-Reveal Logic
+- [x] Automatic Password Generator
+- [ ] Implement Bcrypt Hashing for Master Password
+- [ ] Add "Copy to Clipboard" buttons
+
+---
+
+## 🛡️ Security Disclaimer
+This project is intended for **educational purposes**. For production use, please implement password hashing and environment variables for the `SECRET_KEY`.
