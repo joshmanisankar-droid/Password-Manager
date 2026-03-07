@@ -27,55 +27,16 @@ A lightweight, local-first web application designed to store, generate, and mana
 
 ## 📦 Project Structure
 
+To maintain a clean MVC-style (Model-View-Controller) architecture, the files are organized as follows:
+
 ```text
 Josh_23/
-├── app.py             # Main Flask application logic
-├── data.json          # Local storage (Excluded from Git via .gitignore)
-├── templates/         # UI Components
-│   ├── index.html     # Main Vault Dashboard
-│   └── login.html     # Security Gateway
-└── README.md          # Project Documentation
+├── app.py             # Backend: Flask server & routing logic
+├── data.json          # Database: Local JSON storage (Private)
+├── .gitignore         # Security: Prevents sensitive files from being uploaded
+├── requirements.txt   # Configuration: Lists necessary Python libraries
+└── templates/         # Frontend: HTML UI components
+    ├── index.html     # Main Dashboard (Vault & Search)
+    └── login.html     # Authentication Gateway
 \```
 
-
-
----
-
-## ⚙️ Setup & Installation
-
-### 1. Clone the Repository
-\```bash
-git clone [https://github.com/YOUR_USERNAME/SecureVault.git](https://github.com/YOUR_USERNAME/SecureVault.git)
-cd SecureVault
-\```
-
-### 2. Install Dependencies
-\```bash
-pip install flask
-\```
-
-### 3. Run the Application
-\```bash
-python app.py
-\```
-
-### 4. Access the Vault
-Open your browser and navigate to: `http://127.0.0.1:8080`
-* **Username:** `josh`
-* **Password:** `1234`
-
----
-
-## ✅ Development Roadmap
-- [x] User Authentication & Sessions
-- [x] Search-to-Reveal Logic
-- [x] Automatic Password Generator
-- [ ] Implement Bcrypt Hashing for Master Password
-- [ ] Add "Copy to Clipboard" buttons for passwords
-
----
-
-## 🛡️ Security Note
-This project is intended for educational purposes. For production use, it is recommended to implement password hashing (e.g., `Bcrypt`) and utilize environment variables for the `SECRET_KEY`.
-
----
