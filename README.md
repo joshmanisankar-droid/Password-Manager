@@ -30,27 +30,27 @@ Josh_23/
 └── templates/         # UI Components
     ├── index.html     # Main Dashboard & Search
     └── login.html     # Security Gateway
-\```
+```
 
 ---
 
 ## 🛠️ Setup & Installation
 
 ### 1. Clone the Repository
-\```bash
+```bash
 git clone [https://github.com/joshmanisankar-droid/Password-Manager.git](https://github.com/joshmanisankar-droid/Password-Manager.git)
 cd Password-Manager
-\```
+```
 
 ### 2. Install Dependencies
-\```bash
+```bash
 pip install -r requirements.txt
-\```
+```
 
 ### 3. Run the Application
-\```bash
+```bash
 python app.py
-\```
+```
 
 > **Note:** Access the vault at `http://127.0.0.1:8080`.  
 > **Default Login:** `josh` / `1234`
