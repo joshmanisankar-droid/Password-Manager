@@ -23,13 +23,13 @@ A lightweight, local-first web application designed to store and manage digital 
 
 ```text
 Josh_23/
-├── app.py             # Backend server & routing logic
-├── data.json          # Private storage (Excluded via .gitignore)
-├── .gitignore         # Security: Prevents sensitive file uploads
-├── requirements.txt   # Configuration: Project dependencies
-└── templates/         # UI Components
-    ├── index.html     # Main Dashboard & Search
-    └── login.html     # Security Gateway
+├── app.py             
+├── data.json          
+├── .gitignore         
+├── requirements.txt   
+└── templates/         
+    ├── index.html     
+    └── login.html     
 ```
 
 ---
